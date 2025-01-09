@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .scrollbar-none::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-none {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    h1 {
+        @apply text-xl mb-4 uppercase;
+    }
+    .navbar-active {
+        @apply bg-slate-800;
+    }
+    .label {
+        @apply text-gray-400 mb-1 text-sm;
+    }
+    .btn {
+        @apply rounded-lg p-2 text-center cursor-pointer transition hover:bg-slate-700;
+    }
+    .btn-cancel {
+        @apply bg-gray-600 hover:bg-gray-500;
+    }
+    .btn-create {
+        @apply bg-blue-600 hover:bg-blue-500;
+    }
+    .component {
+        @apply max-w-screen-xl mx-auto;
+    }
+    .card-event {
+        @apply w-[200px] flex-none rounded-md bg-slate-900 p-4;
+    }
+    .list-event {
+        @apply mt-2 text-gray-300 space-y-1;
+    }
+    .list-event li {
+        @apply p-1 px-2 capitalize text-sm rounded border border-gray-500 cursor-pointer hover:bg-slate-800 transition line-clamp-1;
+    }
+    .list-event li.important {
+        @apply border-red-500;
+    }
+    .list-event li.notice {
+        @apply border-yellow-500;
+    }
+
+    .showEvent .normal {
+        @apply border px-2 py-1 rounded;
+    }
+
+    .showEvent .notice {
+        @apply bg-yellow-600 px-2 py-1 rounded;
+    }
+
+    .showEvent .important {
+        @apply bg-red-500 px-2 py-1 rounded;
+    }
+
+    .table {
+        @apply w-full;
+    }
+
+    .table thead {
+        @apply bg-slate-900 rounded-lg;
+    }
+
+    .table th, .table td {
+        @apply p-2 text-left text-sm;
+    }
+
+    .table tbody tr:nth-child(even)
+    {
+        @apply bg-slate-700;
+    }
+
+    .table span.normal,
+    .table span.notice,
+    .table span.important {
+        @apply border py-1 px-2 capitalize rounded-lg;
+    }
+
+    .table span.notice {
+        @apply border-yellow-600;
+    }
+
+    .table span.important {
+        @apply border-red-500;
+    }
+
+    .table span.complete, span.complete {
+        @apply text-green-500;
+    }
+
+    .in {
+        @apply text-blue-300;
+    }
+
+    .suggestions {
+        @apply flex items-center space-x-2 text-[10px] mt-2;
+    }
+
+    .suggestions span {
+        @apply cursor-pointer bg-slate-700 hover:bg-slate-900 py-1 px-2 rounded;
+    }
+
+    .out {
+        @apply text-yellow-600;
+    }
+
+    tr.subtable td, tr.balance td {
+        @apply bg-black;
+    }
+    tr.balance td {
+        @apply bg-blue-900 font-bold;
+    }
+    .table.nopadding td {
+        @apply px-1;
+    }
+    .table.nopadding tr:nth-child(even)
+    {
+        @apply bg-transparent;
+    }
+
+    .body {
+        @apply grid grid-cols-12 gap-4 mt-8;
+    }
+    .sidebar {
+        @apply col-span-2;
+    }
+    .sidebar a {
+        @apply block py-2 px-3 rounded-lg border border-gray-500 bg-slate-900 hover:bg-slate-800 transition;
+    }
+    .sidebar a.active {
+        @apply bg-blue-900;
+    }
+
+    .item-create {
+        @apply grid grid-cols-4 gap-4 justify-start items-start;
+    }
+
+    .item-create > div {
+        @apply p-4 rounded-lg;
+    }
+    .brand-option {
+        @apply p-2 rounded-lg bg-slate-700 hover:bg-slate-600 
+        transition cursor-pointer flex items-center gap-4;
+    }
+    .input-items input, .input-items select {
+        @apply text-xs;
+    }
+
+    .nobackground {
+        @apply bg-transparent !important;
+    }
+    
+    .row-strip {
+        @apply odd:bg-slate-700 even:bg-slate-600;
+    }
+    .dropdown {
+        @apply absolute top-[105%] left-0 p-2 rounded-lg bg-slate-900 capitalize z-50 max-h-[350px] overflow-scroll scrollbar-none;
+    }
+
+    .form-input {
+        @apply py-1 !important;
+    }
+
+}

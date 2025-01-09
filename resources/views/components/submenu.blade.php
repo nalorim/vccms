@@ -1,0 +1,5 @@
+<div >
+
+    <livewire:menu />
+
+</div>
